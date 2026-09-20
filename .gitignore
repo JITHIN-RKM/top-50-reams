@@ -1,0 +1,16 @@
+node_modules
+.next
+.env.local
+.DS_Store
+.npm
+
+# Google Search Console & Service Account Credentials
+*credentials*.json
+*service-account*.json
+gsc-credentials.json
+google-key.json
+*.key
+*.pem
+*.tsbuildinfo
+scratch/
+.agents/

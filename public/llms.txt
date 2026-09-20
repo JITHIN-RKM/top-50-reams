@@ -1,0 +1,26 @@
+﻿# UCEOU SIH 2026 Internal Selection Hackathon
+> The official campus-level internal selection round for the Smart India Hackathon 2026, hosted by the University College of Engineering, Osmania University (UCEOU), Hyderabad.
+
+## About the Hackathon
+The UCEOU SIH 2026 Internal Hackathon selects and nominates top student engineering teams to represent Osmania University on the national Smart India Hackathon portal.
+
+- **Institution:** University College of Engineering, Osmania University (UCEOU)
+- **Location:** Assembly Hall, UCEOU Main Campus, Hyderabad, Telangana 500007, India
+- **Dates:** 
+  - Phase 1 Pitching: September 2–3, 2026
+  - Phase 2 Final Selection Pitching: September 11, 2026
+- **Format:** In-person presentation (5-minute pitch + 5-minute jury Q&A)
+- **Official Website:** https://sih-ouce.meetthealtezza.tech
+
+## Eligibility & Rules
+1. **Team Size:** Strictly 6 members from UCEOU.
+2. **Diversity Requirement:** At least 1 female member is mandatory per team.
+3. **Problem Statements:** Teams can select up to 2 problem statements (Primary and Secondary) from the 226 official SIH 2026 challenges.
+4. **Slide Deck Format:** Mandatory 6-slide presentation (Title, Idea & Solution, Technical Approach, Feasibility, Impact & Benefits, Research & References).
+5. **Tools Permitted:** AI coding tools and LLMs are allowed, provided all team members can fully defend their technical architecture during jury evaluation.
+
+## Key Links
+- **Home:** https://sih-ouce.meetthealtezza.tech/
+- **Problem Statements Explorer:** https://sih-ouce.meetthealtezza.tech/problem-statements
+- **National SIH Portal:** https://www.sih.gov.in
+- **Contact:** sihuceou@gmail.com
