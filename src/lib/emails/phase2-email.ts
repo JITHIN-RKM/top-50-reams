@@ -1,12 +1,17 @@
+import { escapeHtml, isSafeHttpsUrl } from '@/lib/security';
+
 export function buildPhase2ConfirmationEmail({
-  teamName,
-  leaderName,
-  whatsappLink = 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV',
+  teamName: rawTeam,
+  leaderName: rawLeader,
+  whatsappLink: rawWhatsapp = 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV',
 }: {
   teamName: string;
   leaderName: string;
   whatsappLink?: string;
 }): string {
+  const teamName = escapeHtml(rawTeam);
+  const leaderName = escapeHtml(rawLeader);
+  const whatsappLink = isSafeHttpsUrl(rawWhatsapp) ? rawWhatsapp : 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV';
   return `<!DOCTYPE html>
 <html lang="en">
 <head>

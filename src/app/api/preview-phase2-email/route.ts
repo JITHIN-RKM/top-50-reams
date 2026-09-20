@@ -2,13 +2,20 @@ import { NextRequest, NextResponse } from 'next/server';
 import { buildPhase2GuidelinesEmail } from '@/lib/emails/phase2-guidelines-email';
 import { buildPhase2BroadcastEmail } from '@/lib/emails/phase2-broadcast-email';
 import { buildPhase2ConfirmationEmail } from '@/lib/emails/phase2-email';
+import { escapeHtml, isSafeHttpsUrl } from '@/lib/security';
+
+const DEFAULT_WHATSAPP = 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const teamName = searchParams.get('team') || 'Byte Bandits';
-  const leaderName = searchParams.get('leader') || 'Arjun Reddy';
-  const whatsappLink = searchParams.get('whatsapp') || 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV';
+  const rawTeam = searchParams.get('team') || 'Byte Bandits';
+  const rawLeader = searchParams.get('leader') || 'Arjun Reddy';
+  const rawWhatsapp = searchParams.get('whatsapp');
   const emailType = searchParams.get('type') || 'guidelines';
+
+  const teamName = escapeHtml(rawTeam);
+  const leaderName = escapeHtml(rawLeader);
+  const whatsappLink = (rawWhatsapp && isSafeHttpsUrl(rawWhatsapp)) ? rawWhatsapp : DEFAULT_WHATSAPP;
 
   const isRegisteredParam = searchParams.get('registered');
   const isRegistered = isRegisteredParam !== null ? isRegisteredParam === 'true' : false;

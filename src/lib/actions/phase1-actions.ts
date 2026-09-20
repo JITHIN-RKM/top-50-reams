@@ -4,6 +4,8 @@ import { createAdminClient } from '@/lib/supabase/admin';
 import { auth } from '@clerk/nextjs/server';
 import { revalidatePath } from 'next/cache';
 
+import { isValidPdfBuffer } from '@/lib/security';
+
 /**
  * Register a team for Phase 1.
  * Only the team leader of a finalized team can do this.
@@ -32,14 +34,9 @@ export async function uploadPhase1PDF(formData: FormData) {
     if (file.size > 2 * 1024 * 1024) return { success: false, error: 'File size must be under 2MB. Please compress your PDF.' };
     
     const fileName = file.name?.toLowerCase() || '';
-    const fileType = file.type?.toLowerCase() || '';
-    const isPdf = 
-      fileName.endsWith('.pdf') ||
-      fileType.includes('pdf') ||
-      fileType === 'application/octet-stream' ||
-      fileType === '';
-    
-    if (!isPdf) return { success: false, error: 'Only PDF files (.pdf) are allowed' };
+    if (!fileName.endsWith('.pdf')) {
+      return { success: false, error: 'Only PDF files (.pdf) are allowed' };
+    }
 
     const supabase = createAdminClient();
 
@@ -65,6 +62,10 @@ export async function uploadPhase1PDF(formData: FormData) {
     // Convert file to buffer for robust upload in Node/serverless runtime
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
+
+    if (!isValidPdfBuffer(buffer)) {
+      return { success: false, error: 'Uploaded file is not a valid PDF document' };
+    }
 
     // Upload to phase1_pdfs bucket with cacheControl 0 to prevent CDN caching on update
     const { error } = await supabase.storage

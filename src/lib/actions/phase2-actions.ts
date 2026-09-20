@@ -6,6 +6,8 @@ import { revalidatePath } from 'next/cache';
 import { Resend } from 'resend';
 import { buildPhase2ConfirmationEmail } from '@/lib/emails/phase2-email';
 
+import { isValidPdfBuffer } from '@/lib/security';
+
 const resendApiKey = process.env.RESEND_API_KEY || 're_dummy_key_to_prevent_build_error';
 const resend = new Resend(resendApiKey);
 
@@ -154,14 +156,9 @@ export async function uploadPhase2PDF(formData: FormData) {
     if (file.size > 4 * 1024 * 1024) return { success: false, error: 'File size must be under 4MB. Please compress your PDF.' };
 
     const fileName = file.name?.toLowerCase() || '';
-    const fileType = file.type?.toLowerCase() || '';
-    const isPdf =
-      fileName.endsWith('.pdf') ||
-      fileType.includes('pdf') ||
-      fileType === 'application/octet-stream' ||
-      fileType === '';
-
-    if (!isPdf) return { success: false, error: 'Only PDF files (.pdf) are allowed' };
+    if (!fileName.endsWith('.pdf')) {
+      return { success: false, error: 'Only PDF files (.pdf) are allowed' };
+    }
 
     const supabase = createAdminClient();
 
@@ -185,6 +182,10 @@ export async function uploadPhase2PDF(formData: FormData) {
 
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
+
+    if (!isValidPdfBuffer(buffer)) {
+      return { success: false, error: 'Uploaded file is not a valid PDF document' };
+    }
 
     const { error } = await supabase.storage
       .from('phase2_pdfs')

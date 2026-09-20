@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import teamsData from '@/data/teams_breakdown.json';
+import { sanitizeCsvCell } from '@/lib/security';
 
 export async function GET() {
   const top47Teams = (teamsData as any).top47Teams || [];
@@ -22,29 +23,23 @@ export async function GET() {
     'Members Count',
   ];
 
-  const escapeCSV = (val: any) => {
-    if (val === null || val === undefined) return '""';
-    const str = String(val).replace(/"/g, '""');
-    return `"${str}"`;
-  };
-
   const rows: string[] = [];
   rows.push(headers.join(','));
 
   // Section 1: Top 47 Shortlisted Teams
   top47Teams.forEach((t: any, idx: number) => {
     rows.push([
-      escapeCSV('1. Top 47 Shortlisted Teams (Selection Pool for Final 45)'),
-      escapeCSV('Shortlisted'),
+      sanitizeCsvCell('1. Top 47 Shortlisted Teams (Selection Pool for Final 45)'),
+      sanitizeCsvCell('Shortlisted'),
       idx + 1,
-      escapeCSV(t.name),
-      escapeCSV(t.leaderName),
-      escapeCSV(t.leaderPhone),
-      escapeCSV(t.leaderEmail),
-      escapeCSV(t.leaderBranch),
-      escapeCSV(t.leaderYear),
-      escapeCSV(t.psId),
-      escapeCSV(t.psTitle),
+      sanitizeCsvCell(t.name),
+      sanitizeCsvCell(t.leaderName),
+      sanitizeCsvCell(t.leaderPhone),
+      sanitizeCsvCell(t.leaderEmail),
+      sanitizeCsvCell(t.leaderBranch),
+      sanitizeCsvCell(t.leaderYear),
+      sanitizeCsvCell(t.psId),
+      sanitizeCsvCell(t.psTitle),
       t.membersCount,
     ].join(','));
   });
@@ -52,17 +47,17 @@ export async function GET() {
   // Candidate #48 (Alternate)
   candidate48Teams.forEach((t: any) => {
     rows.push([
-      escapeCSV('1. Top Shortlisted (Alternate Candidate #48)'),
-      escapeCSV('Shortlisted (Alternate)'),
+      sanitizeCsvCell('1. Top Shortlisted (Alternate Candidate #48)'),
+      sanitizeCsvCell('Shortlisted (Alternate)'),
       48,
-      escapeCSV(t.name),
-      escapeCSV(t.leaderName),
-      escapeCSV(t.leaderPhone),
-      escapeCSV(t.leaderEmail),
-      escapeCSV(t.leaderBranch),
-      escapeCSV(t.leaderYear),
-      escapeCSV(t.psId),
-      escapeCSV(t.psTitle),
+      sanitizeCsvCell(t.name),
+      sanitizeCsvCell(t.leaderName),
+      sanitizeCsvCell(t.leaderPhone),
+      sanitizeCsvCell(t.leaderEmail),
+      sanitizeCsvCell(t.leaderBranch),
+      sanitizeCsvCell(t.leaderYear),
+      sanitizeCsvCell(t.psId),
+      sanitizeCsvCell(t.psTitle),
       t.membersCount,
     ].join(','));
   });
@@ -70,17 +65,17 @@ export async function GET() {
   // Section 2: Waiting List (5 teams)
   waitlistTeams.forEach((t: any, idx: number) => {
     rows.push([
-      escapeCSV('2. Waiting List (5 Teams)'),
-      escapeCSV(`Waitlist Rank #${idx + 1}`),
+      sanitizeCsvCell('2. Waiting List (5 Teams)'),
+      sanitizeCsvCell(`Waitlist Rank #${idx + 1}`),
       idx + 1,
-      escapeCSV(t.name),
-      escapeCSV(t.leaderName),
-      escapeCSV(t.leaderPhone),
-      escapeCSV(t.leaderEmail),
-      escapeCSV(t.leaderBranch),
-      escapeCSV(t.leaderYear),
-      escapeCSV(t.psId),
-      escapeCSV(t.psTitle),
+      sanitizeCsvCell(t.name),
+      sanitizeCsvCell(t.leaderName),
+      sanitizeCsvCell(t.leaderPhone),
+      sanitizeCsvCell(t.leaderEmail),
+      sanitizeCsvCell(t.leaderBranch),
+      sanitizeCsvCell(t.leaderYear),
+      sanitizeCsvCell(t.psId),
+      sanitizeCsvCell(t.psTitle),
       t.membersCount,
     ].join(','));
   });
@@ -88,17 +83,17 @@ export async function GET() {
   // Section 3: Eliminated Teams (10 teams)
   eliminatedTeams.forEach((t: any, idx: number) => {
     rows.push([
-      escapeCSV('3. Eliminated Teams (10 Teams)'),
-      escapeCSV('Eliminated'),
+      sanitizeCsvCell('3. Eliminated Teams (10 Teams)'),
+      sanitizeCsvCell('Eliminated'),
       idx + 1,
-      escapeCSV(t.name),
-      escapeCSV(t.leaderName),
-      escapeCSV(t.leaderPhone),
-      escapeCSV(t.leaderEmail),
-      escapeCSV(t.leaderBranch),
-      escapeCSV(t.leaderYear),
-      escapeCSV(t.psId),
-      escapeCSV(t.psTitle),
+      sanitizeCsvCell(t.name),
+      sanitizeCsvCell(t.leaderName),
+      sanitizeCsvCell(t.leaderPhone),
+      sanitizeCsvCell(t.leaderEmail),
+      sanitizeCsvCell(t.leaderBranch),
+      sanitizeCsvCell(t.leaderYear),
+      sanitizeCsvCell(t.psId),
+      sanitizeCsvCell(t.psTitle),
       t.membersCount,
     ].join(','));
   });
@@ -110,7 +105,8 @@ export async function GET() {
     headers: {
       'Content-Type': 'text/csv; charset=utf-8',
       'Content-Disposition': 'attachment; filename="sih_ouce_2026_top_teams_segregation.csv"',
-      'Cache-Control': 'no-store',
+      'Cache-Control': 'no-store, no-cache, must-revalidate',
+      'X-Content-Type-Options': 'nosniff',
     },
   });
 }

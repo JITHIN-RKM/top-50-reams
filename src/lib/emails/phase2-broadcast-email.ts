@@ -1,10 +1,12 @@
+import { escapeHtml, isSafeHttpsUrl } from '@/lib/security';
+
 export function buildPhase2BroadcastEmail({
-  teamName,
-  leaderName,
+  teamName: rawTeam,
+  leaderName: rawLeader,
   isRegistered = false,
   registeredCount = 48,
   totalTeams = 73,
-  whatsappLink = 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV',
+  whatsappLink: rawWhatsapp = 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV',
 }: {
   teamName: string;
   leaderName: string;
@@ -13,6 +15,9 @@ export function buildPhase2BroadcastEmail({
   totalTeams?: number;
   whatsappLink?: string;
 }): string {
+  const teamName = escapeHtml(rawTeam);
+  const leaderName = escapeHtml(rawLeader);
+  const whatsappLink = isSafeHttpsUrl(rawWhatsapp) ? rawWhatsapp : 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV';
   return `<!DOCTYPE html>
 <html lang="en">
 <head>

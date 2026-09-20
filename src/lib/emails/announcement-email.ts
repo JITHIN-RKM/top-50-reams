@@ -1,12 +1,17 @@
+import { escapeHtml } from '@/lib/security';
+
 export function buildAnnouncementEmail({
-  title,
-  content,
+  title: rawTitle,
+  content: rawContent,
   adminOnly = false,
 }: {
   title: string;
   content: string;
   adminOnly?: boolean;
 }): string {
+  const title = escapeHtml(rawTitle);
+  const content = escapeHtml(rawContent).replace(/\n/g, '<br />');
+
   const badgeText = adminOnly ? '🔒 ADMIN ONLY DIRECTIVE' : 'OFFICIAL BROADCAST';
   const badgeBg = adminOnly ? '#FEF2F2' : '#EBF5FF';
   const badgeBorder = adminOnly ? '#FECACA' : '#BFDBFE';
