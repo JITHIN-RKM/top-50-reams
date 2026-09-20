@@ -8,13 +8,11 @@ const DEFAULT_WHATSAPP = 'https://chat.whatsapp.com/LABDr9I1Y3QKUVi4Coa8QV';
 
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
-  const rawTeam = searchParams.get('team') || 'Byte Bandits';
-  const rawLeader = searchParams.get('leader') || 'Arjun Reddy';
+  const teamName = searchParams.get('team') || 'Byte Bandits';
+  const leaderName = searchParams.get('leader') || 'Arjun Reddy';
   const rawWhatsapp = searchParams.get('whatsapp');
   const emailType = searchParams.get('type') || 'guidelines';
 
-  const teamName = escapeHtml(rawTeam);
-  const leaderName = escapeHtml(rawLeader);
   const whatsappLink = (rawWhatsapp && isSafeHttpsUrl(rawWhatsapp)) ? rawWhatsapp : DEFAULT_WHATSAPP;
 
   const isRegisteredParam = searchParams.get('registered');
