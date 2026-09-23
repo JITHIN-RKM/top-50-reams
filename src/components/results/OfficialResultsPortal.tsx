@@ -9,7 +9,6 @@ import {
   Printer, 
   CheckCircle2, 
   Clock, 
-  XCircle, 
   Award, 
   ExternalLink, 
   Users, 
@@ -24,7 +23,7 @@ import {
 } from 'lucide-react';
 import teamsData from '@/data/teams_breakdown.json';
 
-type ActiveTab = 'all' | 'top47' | 'waitlist' | 'eliminated';
+type ActiveTab = 'all' | 'top45' | 'waitlist';
 
 export default function OfficialResultsPortal() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -33,20 +32,18 @@ export default function OfficialResultsPortal() {
   const [selectedTeam, setSelectedTeam] = useState<any | null>(null);
   const [copiedText, setCopiedText] = useState<string | null>(null);
 
-  const top47Teams = (teamsData as any).top47Teams || [];
-  const candidate48Teams = (teamsData as any).candidate48Teams || [];
+  const top45Teams = (teamsData as any).top45Teams || (teamsData as any).top47Teams || [];
   const waitlistTeams = (teamsData as any).waitlistTeams || [];
-  const eliminatedTeams = (teamsData as any).eliminatedTeams || [];
 
   const allBranches = useMemo(() => {
     const branches = new Set<string>();
-    [...top47Teams, ...candidate48Teams, ...waitlistTeams, ...eliminatedTeams].forEach((t: any) => {
+    [...top45Teams, ...waitlistTeams].forEach((t: any) => {
       if (t.leaderBranch && t.leaderBranch !== 'N/A') {
         branches.add(t.leaderBranch.trim().toUpperCase());
       }
     });
     return Array.from(branches).sort();
-  }, [top47Teams, candidate48Teams, waitlistTeams, eliminatedTeams]);
+  }, [top45Teams, waitlistTeams]);
 
   // Filter helper
   const filterFn = (t: any) => {
@@ -78,10 +75,8 @@ export default function OfficialResultsPortal() {
     return false;
   };
 
-  const filteredTop47 = top47Teams.filter(filterFn);
-  const filteredCandidate48 = candidate48Teams.filter(filterFn);
+  const filteredTop45 = top45Teams.filter(filterFn);
   const filteredWaitlist = waitlistTeams.filter(filterFn);
-  const filteredEliminated = eliminatedTeams.filter(filterFn);
 
   const handleCopy = (text: string, label: string) => {
     if (navigator.clipboard && window.isSecureContext) {
@@ -162,7 +157,7 @@ export default function OfficialResultsPortal() {
                 Smart India Hackathon 2026 (SIH 2026)
               </h1>
               <p className="text-xs sm:text-sm font-semibold text-slate-600 mt-0.5">
-                Internal Selection Round — Official 3-Tier Results &amp; Nomination Roster
+                Internal Selection Round — Official Results &amp; Final Nomination Roster
               </p>
             </div>
           </div>
@@ -203,52 +198,34 @@ export default function OfficialResultsPortal() {
                 Memorandum from the Institutional Screening Committee
               </h2>
               <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
-                Following the Stage-1 abstract review and Stage-2 offline pitch evaluations conducted across Panels S1, S2, S3, and S4, the participating teams are segregated into three official tiers below. The <strong>Top 47 Shortlisted Teams</strong> form the nomination selection pool, from which the committee will finalize the college’s <strong>Top 45 Teams</strong> for official submission to the SIH 2026 national portal.
+                Following the Stage-1 abstract review and Stage-2 offline pitch evaluations conducted across Panels S1, S2, S3, and S4, the participating teams are segregated into the two official tiers below: the <strong>Top 45 Nominated Teams</strong> for official submission to the SIH 2026 national portal, and the <strong>Waiting List (5 Standby Teams)</strong> in strict priority order.
               </p>
             </div>
           </div>
         </div>
 
         {/* 4. METRIC CARDS (EXECUTIVE OVERVIEW WITH TAP-TO-FILTER) */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-4 print:grid-cols-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 sm:gap-4 print:grid-cols-3">
           
-          {/* Card 1: Top Shortlisted */}
+          {/* Card 1: Top 45 Nominated Teams */}
           <div 
-            onClick={() => setActiveTab('top47')}
+            onClick={() => setActiveTab('top45')}
             className={`cursor-pointer rounded-xl p-3.5 sm:p-4 border transition active:scale-95 relative overflow-hidden ${
-              activeTab === 'top47'
+              activeTab === 'top45'
                 ? 'bg-blue-50/80 border-blue-400 shadow-sm'
                 : 'bg-white border-blue-200 hover:border-blue-300 shadow-sm'
             }`}
-            title="Filter to Shortlisted Pool"
+            title="Filter to Top 45 Nominated Teams"
           >
             <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-700 mb-1 flex items-center justify-between">
-              <span className="truncate">1. Shortlisted Pool</span>
+              <span className="truncate">1. Top 45 Nominated</span>
               <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600 flex-shrink-0" />
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-950 font-mono">{top47Teams.length}</div>
-            <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium truncate">Contenders for nomination</p>
+            <div className="text-2xl sm:text-3xl font-black text-slate-950 font-mono">{top45Teams.length}</div>
+            <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium truncate">SIH National Portal Roster</p>
           </div>
 
-          {/* Card 2: Target Final Cut */}
-          <div 
-            onClick={() => setActiveTab('top47')}
-            className={`cursor-pointer rounded-xl p-3.5 sm:p-4 border transition active:scale-95 relative overflow-hidden ${
-              activeTab === 'top47'
-                ? 'bg-emerald-50/80 border-emerald-400 shadow-sm'
-                : 'bg-white border-emerald-200 hover:border-emerald-300 shadow-sm'
-            }`}
-            title="Final 45 Target Selection"
-          >
-            <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1 flex items-center justify-between">
-              <span className="truncate">Target Final Cut</span>
-              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 flex-shrink-0" />
-            </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-950 font-mono">45</div>
-            <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium truncate">47 minus 2 committee cuts</p>
-          </div>
-
-          {/* Card 3: Waiting List */}
+          {/* Card 2: Waiting List */}
           <div 
             onClick={() => setActiveTab('waitlist')}
             className={`cursor-pointer rounded-xl p-3.5 sm:p-4 border transition active:scale-95 relative overflow-hidden ${
@@ -266,22 +243,22 @@ export default function OfficialResultsPortal() {
             <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium truncate">Priority ranks #1 to #5</p>
           </div>
 
-          {/* Card 4: Eliminated */}
+          {/* Card 3: Total Official Contenders */}
           <div 
-            onClick={() => setActiveTab('eliminated')}
-            className={`cursor-pointer rounded-xl p-3.5 sm:p-4 border transition active:scale-95 relative overflow-hidden ${
-              activeTab === 'eliminated'
-                ? 'bg-rose-50/80 border-rose-400 shadow-sm'
-                : 'bg-white border-rose-200 hover:border-rose-300 shadow-sm'
+            onClick={() => setActiveTab('all')}
+            className={`col-span-2 sm:col-span-1 cursor-pointer rounded-xl p-3.5 sm:p-4 border transition active:scale-95 relative overflow-hidden ${
+              activeTab === 'all'
+                ? 'bg-emerald-50/80 border-emerald-400 shadow-sm'
+                : 'bg-white border-emerald-200 hover:border-emerald-300 shadow-sm'
             }`}
-            title="Filter to Eliminated Teams"
+            title="Show All Official Contenders"
           >
-            <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-rose-700 mb-1 flex items-center justify-between">
-              <span className="truncate">3. Eliminated</span>
-              <XCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-rose-600 flex-shrink-0" />
+            <div className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-emerald-700 mb-1 flex items-center justify-between">
+              <span className="truncate">Total Contenders</span>
+              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 flex-shrink-0" />
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-950 font-mono">{eliminatedTeams.length}</div>
-            <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium truncate">Non-qualifying / absent</p>
+            <div className="text-2xl sm:text-3xl font-black text-slate-950 font-mono">{top45Teams.length + waitlistTeams.length}</div>
+            <p className="text-[10px] sm:text-xs text-slate-500 mt-0.5 font-medium truncate">Top 45 + 5 Standby Teams</p>
           </div>
         </div>
 
@@ -295,43 +272,33 @@ export default function OfficialResultsPortal() {
             <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scroll-smooth no-scrollbar -mx-1 px-1">
               <button
                 onClick={() => setActiveTab('all')}
-                className={`px-3 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
+                className={`px-3.5 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
                   activeTab === 'all'
                     ? 'bg-slate-900 text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900 bg-white border border-slate-200'
                 }`}
               >
-                All 3 Tiers ({top47Teams.length + waitlistTeams.length + eliminatedTeams.length})
+                All Teams ({top45Teams.length + waitlistTeams.length})
               </button>
               <button
-                onClick={() => setActiveTab('top47')}
-                className={`px-3 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
-                  activeTab === 'top47'
+                onClick={() => setActiveTab('top45')}
+                className={`px-3.5 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
+                  activeTab === 'top45'
                     ? 'bg-blue-700 text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900 bg-white border border-slate-200'
                 }`}
               >
-                1. Shortlisted ({top47Teams.length})
+                1. Top 45 Nominated ({top45Teams.length})
               </button>
               <button
                 onClick={() => setActiveTab('waitlist')}
-                className={`px-3 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
+                className={`px-3.5 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
                   activeTab === 'waitlist'
                     ? 'bg-purple-700 text-white shadow-sm'
                     : 'text-slate-600 hover:text-slate-900 bg-white border border-slate-200'
                 }`}
               >
                 2. Waiting List ({waitlistTeams.length})
-              </button>
-              <button
-                onClick={() => setActiveTab('eliminated')}
-                className={`px-3 py-2 rounded-lg text-xs font-bold transition flex-shrink-0 active:scale-95 min-h-[38px] ${
-                  activeTab === 'eliminated'
-                    ? 'bg-rose-700 text-white shadow-sm'
-                    : 'text-slate-600 hover:text-slate-900 bg-white border border-slate-200'
-                }`}
-              >
-                3. Eliminated ({eliminatedTeams.length})
               </button>
             </div>
 
@@ -374,27 +341,27 @@ export default function OfficialResultsPortal() {
           </div>
         </div>
 
-        {/* 6. SECTION 1: TOP 47 SHORTLISTED TEAMS */}
-        {(activeTab === 'all' || activeTab === 'top47') && (
+        {/* 6. SECTION 1: TOP 45 SHORTLISTED TEAMS */}
+        {(activeTab === 'all' || activeTab === 'top45') && (
           <section className="space-y-3">
             <div className="flex items-center justify-between pb-2 border-b-2 border-blue-800 gap-2">
               <div>
                 <h3 className="text-sm sm:text-base font-black text-slate-900 flex items-center gap-2">
                   <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-blue-700 text-white flex items-center justify-center text-xs font-mono">1</span>
-                  <span>Tier 1: Top 47 Shortlisted Teams</span>
+                  <span>Tier 1: Top 45 Shortlisted Teams (Final Nomination Roster)</span>
                 </h3>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Selection pool for final 45 nomination roster to SIH National Portal.
+                  The evaluating jury's top 45 teams confirmed for official submission to the SIH 2026 National Portal.
                 </p>
               </div>
               <span className="text-xs font-mono font-bold text-blue-800 bg-blue-50 px-2.5 py-1 rounded border border-blue-200 flex-shrink-0">
-                {filteredTop47.length} Teams
+                {filteredTop45.length} Teams
               </span>
             </div>
 
             {/* Mobile Card Stack (md:hidden) */}
             <div className="grid grid-cols-1 gap-3 md:hidden">
-              {filteredTop47.map((t: any, idx: number) => (
+              {filteredTop45.map((t: any, idx: number) => (
                 <div 
                   key={t.id || t.name}
                   onClick={() => setSelectedTeam(t)}
@@ -498,7 +465,7 @@ export default function OfficialResultsPortal() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-200 font-medium text-slate-800">
-                    {filteredTop47.map((t: any, idx: number) => (
+                    {filteredTop45.map((t: any, idx: number) => (
                       <tr 
                         key={t.id || t.name}
                         onClick={() => setSelectedTeam(t)}
@@ -722,181 +689,7 @@ export default function OfficialResultsPortal() {
           </section>
         )}
 
-        {/* 8. SECTION 3: ELIMINATED TEAMS (10 TEAMS) */}
-        {(activeTab === 'all' || activeTab === 'eliminated') && (
-          <section className="space-y-3">
-            <div className="flex items-center justify-between pb-2 border-b-2 border-rose-700 gap-2">
-              <div>
-                <h3 className="text-sm sm:text-base font-black text-slate-900 flex items-center gap-2">
-                  <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-md bg-rose-700 text-white flex items-center justify-center text-xs font-mono">3</span>
-                  <span>Tier 3: Eliminated Teams (10 Teams)</span>
-                </h3>
-                <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Teams officially eliminated per evaluation criteria and attendance thresholds.
-                </p>
-              </div>
-              <span className="text-xs font-mono font-bold text-rose-800 bg-rose-50 px-2.5 py-1 rounded border border-rose-200 flex-shrink-0">
-                {filteredEliminated.length} Teams
-              </span>
-            </div>
-
-            {/* Mobile Card Stack (md:hidden) */}
-            <div className="grid grid-cols-1 gap-3 md:hidden">
-              {filteredEliminated.map((t: any, idx: number) => (
-                <div 
-                  key={t.id || t.name}
-                  onClick={() => setSelectedTeam(t)}
-                  className="p-3.5 rounded-xl border border-rose-200 bg-rose-50/30 shadow-sm hover:border-rose-400 transition cursor-pointer active:scale-[0.99]"
-                >
-                  <div className="flex items-center justify-between gap-2 mb-2">
-                    <div className="flex items-center gap-1.5">
-                      <span className="px-2 py-0.5 rounded font-mono text-xs font-bold bg-rose-100 text-rose-900 border border-rose-200">
-                        #{idx + 1}
-                      </span>
-                      <span className="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase bg-rose-100 text-rose-800 border border-rose-300">
-                        Eliminated
-                      </span>
-                    </div>
-                    <span className="text-[11px] font-semibold text-slate-500 flex items-center gap-1">
-                      <Users className="w-3.5 h-3.5" />
-                      {t.membersCount || 6}
-                    </span>
-                  </div>
-
-                  <div className="text-base font-black text-rose-950 tracking-tight leading-snug mb-1">
-                    {t.name}
-                  </div>
-
-                  <div className="text-xs text-slate-600 mb-2.5 flex flex-wrap items-center gap-x-2 gap-y-0.5">
-                    <span className="font-bold text-slate-900">{t.leaderName}</span>
-                    <span className="text-slate-300">•</span>
-                    <span className="font-semibold text-rose-900 bg-rose-100/70 px-1.5 py-0.5 rounded text-[10px] border border-rose-200/60">
-                      {t.leaderBranch}
-                    </span>
-                    <span className="text-slate-500 text-[11px]">{t.leaderYear}</span>
-                  </div>
-
-                  <div className="bg-white border border-rose-200/80 rounded-lg p-2.5 mb-2.5 text-xs">
-                    <div className="flex items-center gap-1.5 mb-1">
-                      <span className="font-mono text-[10px] font-bold text-rose-800 bg-rose-50 px-1.5 py-0.2 rounded border border-rose-200">
-                        {t.psId}
-                      </span>
-                      <span className="text-[10px] font-medium text-slate-400 uppercase tracking-wider">
-                        {t.psDomain || 'Software'}
-                      </span>
-                    </div>
-                    <div className="text-slate-800 font-medium line-clamp-2 leading-relaxed text-[11px]">
-                      {t.psTitle}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between gap-2 pt-2 border-t border-rose-100">
-                    <div className="flex items-center gap-1.5">
-                      {t.leaderPhone && t.leaderPhone !== 'N/A' && (
-                        <a 
-                          href={`tel:${t.leaderPhone.replace(/\s+/g, '')}`}
-                          onClick={(e) => e.stopPropagation()}
-                          className="w-8 h-8 rounded-lg bg-white hover:bg-rose-100 text-rose-800 flex items-center justify-center transition border border-rose-200"
-                          title={`Call ${t.leaderName}`}
-                        >
-                          <Phone className="w-3.5 h-3.5" />
-                        </a>
-                      )}
-                      {t.leaderEmail && t.leaderEmail !== 'N/A' && (
-                        <a 
-                          href={`mailto:${t.leaderEmail}`}
-                          onClick={(e) => e.stopPropagation()}
-                          className="w-8 h-8 rounded-lg bg-white hover:bg-rose-100 text-rose-800 flex items-center justify-center transition border border-rose-200"
-                          title={`Email ${t.leaderName}`}
-                        >
-                          <Mail className="w-3.5 h-3.5" />
-                        </a>
-                      )}
-                    </div>
-
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        setSelectedTeam(t);
-                      }}
-                      className="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-rose-100/70 hover:bg-rose-200 text-rose-900 font-bold text-xs border border-rose-300 transition active:scale-95 min-h-[36px]"
-                    >
-                      <span>View Squad</span>
-                      <ChevronRight className="w-3.5 h-3.5" />
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Desktop Table View (hidden md:block) */}
-            <div className="hidden md:block border border-rose-200 rounded-xl overflow-hidden shadow-sm bg-white">
-              <div className="overflow-x-auto">
-                <table className="w-full text-left text-xs border-collapse">
-                  <thead className="bg-rose-50 text-rose-900 uppercase tracking-wider font-mono text-[11px] border-b border-rose-200">
-                    <tr>
-                      <th className="py-3 px-3.5 w-12 text-center">#</th>
-                      <th className="py-3 px-3.5">Status</th>
-                      <th className="py-3 px-3.5 font-bold">Team Name</th>
-                      <th className="py-3 px-3.5">Leader Name</th>
-                      <th className="py-3 px-3.5">Contact</th>
-                      <th className="py-3 px-3.5">Branch &amp; Year</th>
-                      <th className="py-3 px-3.5">Problem Statement</th>
-                      <th className="py-3 px-3.5 text-center print:hidden">Squad</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-rose-100 font-medium text-slate-800">
-                    {filteredEliminated.map((t: any, idx: number) => (
-                      <tr 
-                        key={t.id || t.name}
-                        onClick={() => setSelectedTeam(t)}
-                        className="hover:bg-rose-50/50 cursor-pointer transition"
-                      >
-                        <td className="py-3 px-3.5 text-center font-mono text-slate-500 font-semibold">{idx + 1}</td>
-                        <td className="py-3 px-3.5">
-                          <span className="px-2.5 py-0.5 rounded font-bold font-mono text-[10px] uppercase bg-rose-100 text-rose-800 border border-rose-300">
-                            Eliminated
-                          </span>
-                        </td>
-                        <td className="py-3 px-3.5 font-bold text-rose-950">{t.name}</td>
-                        <td className="py-3 px-3.5 text-slate-900 font-semibold">{t.leaderName}</td>
-                        <td className="py-3 px-3.5 space-y-0.5 text-[11px]">
-                          <div className="font-mono text-rose-900 font-medium">{t.leaderPhone}</div>
-                          <div className="text-slate-500 truncate max-w-[150px]">{t.leaderEmail}</div>
-                        </td>
-                        <td className="py-3 px-3.5">
-                          <span className="font-bold text-slate-900">{t.leaderBranch}</span>
-                          <span className="text-slate-500 text-[11px] block">{t.leaderYear}</span>
-                        </td>
-                        <td className="py-3 px-3.5 max-w-xs">
-                          <span className="font-mono text-[10px] font-bold text-rose-800 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200 mr-1.5">
-                            {t.psId}
-                          </span>
-                          <span className="text-slate-700 truncate inline-block align-middle max-w-[220px]">
-                            {t.psTitle}
-                          </span>
-                        </td>
-                        <td className="py-3 px-3.5 text-center print:hidden">
-                          <button 
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              setSelectedTeam(t);
-                            }}
-                            className="px-2.5 py-1 rounded bg-rose-50 hover:bg-rose-100 text-rose-800 font-semibold text-[11px] border border-rose-200 transition"
-                          >
-                            View Roster
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* 9. PRINT-ONLY SIGNATURE ATTESTATION BLOCK */}
+        {/* 8. PRINT-ONLY SIGNATURE ATTESTATION BLOCK */}
         <div className="hidden print:block pt-16 mt-12 border-t-2 border-slate-400 text-xs">
           <div className="grid grid-cols-3 gap-8 text-center">
             <div className="border-t border-slate-600 pt-2">
@@ -918,7 +711,7 @@ export default function OfficialResultsPortal() {
         </div>
       </main>
 
-      {/* 10. TEAM SQUAD DETAIL MODAL (RESPONSIVE BOTTOM-SHEET ON MOBILE) */}
+      {/* 9. TEAM SQUAD DETAIL MODAL (RESPONSIVE BOTTOM-SHEET ON MOBILE) */}
       {selectedTeam && (
         <div 
           className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 print:hidden transition-opacity"
@@ -936,9 +729,7 @@ export default function OfficialResultsPortal() {
               <div className="pr-2">
                 <div className="flex items-center gap-2">
                   <span className={`px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase border ${
-                    selectedTeam.category === 'Eliminated' 
-                      ? 'bg-rose-100 text-rose-800 border-rose-300' 
-                      : selectedTeam.category === 'Waiting List'
+                    selectedTeam.category === 'Waiting List'
                       ? 'bg-purple-100 text-purple-800 border-purple-300'
                       : 'bg-blue-100 text-blue-800 border-blue-300'
                   }`}>
@@ -1079,7 +870,7 @@ export default function OfficialResultsPortal() {
         </div>
       )}
 
-      {/* 11. INSTITUTIONAL FOOTER */}
+      {/* 10. INSTITUTIONAL FOOTER */}
       <footer className="border-t border-slate-200 bg-slate-50 py-6 sm:py-8 px-4 sm:px-6 text-xs text-slate-500 print:hidden mt-8 sm:mt-12">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div>
