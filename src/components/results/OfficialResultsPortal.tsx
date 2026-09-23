@@ -32,8 +32,19 @@ export default function OfficialResultsPortal() {
   const [selectedTeam, setSelectedTeam] = useState<any | null>(null);
   const [copiedText, setCopiedText] = useState<string | null>(null);
 
-  const top45Teams = (teamsData as any).top45Teams || (teamsData as any).top47Teams || [];
-  const waitlistTeams = (teamsData as any).waitlistTeams || [];
+  const top45Teams = useMemo(() => {
+    const list = [...((teamsData as any).top45Teams || (teamsData as any).top47Teams || [])];
+    return list.sort((a: any, b: any) =>
+      (a.name || '').localeCompare(b.name || '', undefined, { sensitivity: 'base', numeric: true })
+    );
+  }, []);
+
+  const waitlistTeams = useMemo(() => {
+    const list = [...((teamsData as any).waitlistTeams || [])];
+    return list.sort((a: any, b: any) =>
+      (a.name || '').localeCompare(b.name || '', undefined, { sensitivity: 'base', numeric: true })
+    );
+  }, []);
 
   const allBranches = useMemo(() => {
     const branches = new Set<string>();
@@ -351,7 +362,7 @@ export default function OfficialResultsPortal() {
                   <span>Tier 1: Top 45 Shortlisted Teams (Final Nomination Roster)</span>
                 </h3>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  The evaluating jury's top 45 teams confirmed for official submission to the SIH 2026 National Portal.
+                  The evaluating jury's top 45 teams confirmed for official submission to the SIH 2026 National Portal (listed in alphabetical order).
                 </p>
               </div>
               <span className="text-xs font-mono font-bold text-blue-800 bg-blue-50 px-2.5 py-1 rounded border border-blue-200 flex-shrink-0">
@@ -527,7 +538,7 @@ export default function OfficialResultsPortal() {
                   <span>Tier 2: Waiting List (5 Official Standby Teams)</span>
                 </h3>
                 <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5">
-                  Ordered standby teams in priority sequence for withdrawal call-ups.
+                  Official standby teams for withdrawal call-ups (listed in alphabetical order).
                 </p>
               </div>
               <span className="text-xs font-mono font-bold text-purple-800 bg-purple-50 px-2.5 py-1 rounded border border-purple-200 flex-shrink-0">

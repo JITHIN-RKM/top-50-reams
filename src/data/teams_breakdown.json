@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-23T16:06:08.492Z",
+  "generatedAt": "2026-09-23T16:14:40.719Z",
   "counts": {
     "top45Count": 45,
     "waitlistCount": 5,
@@ -247,6 +247,86 @@
       "rank": 3
     },
     {
+      "id": "28029776-e40b-4a89-b0a7-6438182b09b0",
+      "name": "BUZZTECH",
+      "category": "Top Shortlisted",
+      "subStatus": "Shortlisted",
+      "leaderName": "K. Sri Sai Aditya",
+      "leaderEmail": "kssa88ouce2026@gmail.com",
+      "leaderPhone": "9100545299",
+      "leaderBranch": "MECH",
+      "leaderYear": "1st Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26021",
+      "psTitle": "Honey Chain: A block chain-based system for honey traceability and smart beekeeping management.",
+      "psCategory": "Software",
+      "psDomain": "Smart Automation",
+      "members": [
+        {
+          "id": "user_3IfkeZpcRpIi9GciGtqHfVbxbGi",
+          "name": "K. Sri Sai Aditya ",
+          "email": "kssa88ouce2026@gmail.com",
+          "phone": "9100545299",
+          "gender": "male",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": true
+        },
+        {
+          "id": "user_3IfpoG1R7bSXqHz4Re0YOvbMxg8",
+          "name": "N.Sharanya",
+          "email": "sharanyanrt@gmail.com",
+          "phone": "7702235701",
+          "gender": "female",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ib6KPeKJmH8SseZHlyZQYg80QD",
+          "name": "sahana bolloju",
+          "email": "bolloju.sahana@gmail.com",
+          "phone": "6303233165",
+          "gender": "female",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IfXFQQyc6pGfdXBOgCL2xjLaCQ",
+          "name": "Mary Leona",
+          "email": "a.maryleona08@gmail.com",
+          "phone": "7842430274",
+          "gender": "female",
+          "branch": "CS-AI",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IfXK9Xuxqew4ZABEdaFSaYhfMN",
+          "name": "Siri Chandana",
+          "email": "sirichandana.0121@gmail.com",
+          "phone": "7093120099",
+          "gender": "female",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IfmtQYP7zZTf5lZUXiFdZIvFTP",
+          "name": "Pandi Satya Sheela Reddy",
+          "email": "pssr2202@gmail.com",
+          "phone": "9542084049",
+          "gender": "male",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        }
+      ],
+      "waitlistRank": 3,
+      "rank": 45
+    },
+    {
       "id": "78e1ba30-a106-4dee-b7d0-27a513e8c14f",
       "name": "Cloud Compilers",
       "category": "Top Shortlisted",
@@ -405,6 +485,86 @@
       ],
       "shortlistRank": 6,
       "rank": 5
+    },
+    {
+      "id": "dde573f0-c952-49ea-956b-5d0aba3434e9",
+      "name": "Codehunters",
+      "category": "Top Shortlisted",
+      "subStatus": "Shortlisted",
+      "leaderName": "Varun siddarth G",
+      "leaderEmail": "gvarunsiddarth@gmail.com",
+      "leaderPhone": "9110531035",
+      "leaderBranch": "CS-AI",
+      "leaderYear": "1st Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26139",
+      "psTitle": "Hybrid Quantum Machine Learning Platform for Early Disease Detection",
+      "psCategory": "Software",
+      "psDomain": "MedTech / BioTech / HealthTech",
+      "members": [
+        {
+          "id": "user_3IazmfA9vHLVwa3n3VU74mmCSBm",
+          "name": "Varun siddarth G",
+          "email": "gvarunsiddarth@gmail.com",
+          "phone": "9110531035",
+          "gender": "male",
+          "branch": "CS-AI",
+          "year": "1st Year (B.Tech)",
+          "isLeader": true
+        },
+        {
+          "id": "user_3IcYGvGUfZuRK77MhTDZG7lqVYE",
+          "name": "Karan Ray",
+          "email": "karanray.2203@gmail.com",
+          "phone": "8309630296",
+          "gender": "male",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IfZKc1uS4zrHSj9w0cjnDoaHIM",
+          "name": "Saketh Sreeram",
+          "email": "saketh.yvss@gmail.com",
+          "phone": "9515129473",
+          "gender": "male",
+          "branch": "BME",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IfLedAqv7Bo5B0bwO4Ium1Ukj1",
+          "name": "sathvik mamidala",
+          "email": "sathvik22.mamidala@gmail.com",
+          "phone": "93918262824",
+          "gender": "male",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IfnJgboPAbyy6lquSPOG4Nx8VI",
+          "name": "Dhyuti Gudiseva ",
+          "email": "gdhyuti@gmail.com",
+          "phone": "8149141225",
+          "gender": "female",
+          "branch": "BME",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ifn9xq3OkE4XYZ7SgpNKJkatAa",
+          "name": "Sri varshini",
+          "email": "srivarshini802@gmail.com",
+          "phone": "9063245124",
+          "gender": "female",
+          "branch": "ECE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        }
+      ],
+      "shortlistRank": 45,
+      "rank": 42
     },
     {
       "id": "a25de582-de32-4cea-9e11-3765aacb82be",
@@ -1847,6 +2007,86 @@
       "rank": 23
     },
     {
+      "id": "78190a4d-9e8c-416e-88ad-2be2b62a0686",
+      "name": "PATCH-V Dynamics",
+      "category": "Top Shortlisted",
+      "subStatus": "Shortlisted",
+      "leaderName": "Vanam Hasini",
+      "leaderEmail": "hasinivanam839@gmail.com",
+      "leaderPhone": "8142316944",
+      "leaderBranch": "CSE",
+      "leaderYear": "1st Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26032",
+      "psTitle": "Farmers often face long waiting times, lack of information regarding procurement schedules, and uncertainty about procurement status.",
+      "psCategory": "Software",
+      "psDomain": "Heritage & Culture",
+      "members": [
+        {
+          "id": "user_3IdIShJlxax6ZlXF4tBbCTi62SJ",
+          "name": "G Alok Prasoon",
+          "email": "gaprasoon8@gmail.com",
+          "phone": "9493939850",
+          "gender": "male",
+          "branch": "EEE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IdZbiEah7pysEf1Go8FgLrUaSh",
+          "name": "Vignesh Chilukapalli",
+          "email": "vigneshch35@gmail.com",
+          "phone": "9392333704",
+          "gender": "male",
+          "branch": "ECE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IdZdHl0g6x904VgGnaBVSCUejy",
+          "name": "Bazar Charan Tej Goud",
+          "email": "charantejgoudbazar@gmail.com",
+          "phone": "7207516488",
+          "gender": "male",
+          "branch": "ECE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IdZoRCku2p6ZkJ2jPPe4wyyW7Y",
+          "name": "Payel Biswas",
+          "email": "pl.biswas2006@gmail.com",
+          "phone": "8897809988",
+          "gender": "female",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Idf3sEXvFeAPQe7pAwyLHXoIFy",
+          "name": "Tarangini Ambe",
+          "email": "ambetarangini@gmail.com",
+          "phone": "8179133303",
+          "gender": "female",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ib33AqO5Gm08ekson5Jc2QeZVp",
+          "name": "Vanam Hasini",
+          "email": "hasinivanam839@gmail.com",
+          "phone": "8142316944",
+          "gender": "female",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": true
+        }
+      ],
+      "shortlistRank": 46,
+      "rank": 43
+    },
+    {
       "id": "ae97e032-a4b5-4678-9c21-546e854f4f31",
       "name": "Project A",
       "category": "Top Shortlisted",
@@ -2647,6 +2887,86 @@
       "rank": 33
     },
     {
+      "id": "5042ac8d-bdea-409a-9781-ac6d2f1b4b29",
+      "name": "Team Mavericks",
+      "category": "Top Shortlisted",
+      "subStatus": "Shortlisted",
+      "leaderName": "Abdullah",
+      "leaderEmail": "abdullah.03.09.1427@gmail.com",
+      "leaderPhone": "8712220990",
+      "leaderBranch": "EEE",
+      "leaderYear": "1st Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26033",
+      "psTitle": "Multiple intermediaries reduce farmers earnings and increase consumer prices.",
+      "psCategory": "Software",
+      "psDomain": "MedTech / BioTech / HealthTech",
+      "members": [
+        {
+          "id": "user_3Ig2EQDqz5vNabHWzoFaD5BAwTp",
+          "name": "Abdullah",
+          "email": "abdullah.03.09.1427@gmail.com",
+          "phone": "8712220990",
+          "gender": "male",
+          "branch": "EEE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": true
+        },
+        {
+          "id": "user_3Ig38y3UrHGB6kiEgssgwUlO6gU",
+          "name": "Rahul Gadapa",
+          "email": "rahulgadapa147@gmail.com",
+          "phone": "8686477770",
+          "gender": "male",
+          "branch": "CS-AI",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ig35nZiJNhPabFRiaYVsZ2qjLA",
+          "name": "Jyothsna sai pranathi Madagala",
+          "email": "mjspranathi@gmail.com",
+          "phone": "9390822015",
+          "gender": "female",
+          "branch": "EEE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ig38N52XwuyoKuEjgaY9LV8tXc",
+          "name": "Marate Srichakrika ",
+          "email": "msrichakrika@gmail.com",
+          "phone": "7995232494",
+          "gender": "female",
+          "branch": "EEE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ig3JBCVfljJu3ANzAvF6KD3N0u",
+          "name": "MAMIDI ABHINAV",
+          "email": "abhinav14m@hotmail.com",
+          "phone": "8527394314",
+          "gender": "male",
+          "branch": "CS-AI",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ig3s7gkuQPsOMRXSwFi1hphgxb",
+          "name": "Sai Suhas",
+          "email": "suhassai315@gmail.com",
+          "phone": "7013826899",
+          "gender": "male",
+          "branch": "CIVIL",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        }
+      ],
+      "shortlistRank": 47,
+      "rank": 44
+    },
+    {
       "id": "db627890-09fd-4506-948f-5bb5139e523d",
       "name": "Tech Titans",
       "category": "Top Shortlisted",
@@ -3285,567 +3605,9 @@
       ],
       "shortlistRank": 44,
       "rank": 41
-    },
-    {
-      "id": "dde573f0-c952-49ea-956b-5d0aba3434e9",
-      "name": "Codehunters",
-      "category": "Top Shortlisted",
-      "subStatus": "Shortlisted",
-      "leaderName": "Varun siddarth G",
-      "leaderEmail": "gvarunsiddarth@gmail.com",
-      "leaderPhone": "9110531035",
-      "leaderBranch": "CS-AI",
-      "leaderYear": "1st Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26139",
-      "psTitle": "Hybrid Quantum Machine Learning Platform for Early Disease Detection",
-      "psCategory": "Software",
-      "psDomain": "MedTech / BioTech / HealthTech",
-      "members": [
-        {
-          "id": "user_3IazmfA9vHLVwa3n3VU74mmCSBm",
-          "name": "Varun siddarth G",
-          "email": "gvarunsiddarth@gmail.com",
-          "phone": "9110531035",
-          "gender": "male",
-          "branch": "CS-AI",
-          "year": "1st Year (B.Tech)",
-          "isLeader": true
-        },
-        {
-          "id": "user_3IcYGvGUfZuRK77MhTDZG7lqVYE",
-          "name": "Karan Ray",
-          "email": "karanray.2203@gmail.com",
-          "phone": "8309630296",
-          "gender": "male",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IfZKc1uS4zrHSj9w0cjnDoaHIM",
-          "name": "Saketh Sreeram",
-          "email": "saketh.yvss@gmail.com",
-          "phone": "9515129473",
-          "gender": "male",
-          "branch": "BME",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IfLedAqv7Bo5B0bwO4Ium1Ukj1",
-          "name": "sathvik mamidala",
-          "email": "sathvik22.mamidala@gmail.com",
-          "phone": "93918262824",
-          "gender": "male",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IfnJgboPAbyy6lquSPOG4Nx8VI",
-          "name": "Dhyuti Gudiseva ",
-          "email": "gdhyuti@gmail.com",
-          "phone": "8149141225",
-          "gender": "female",
-          "branch": "BME",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ifn9xq3OkE4XYZ7SgpNKJkatAa",
-          "name": "Sri varshini",
-          "email": "srivarshini802@gmail.com",
-          "phone": "9063245124",
-          "gender": "female",
-          "branch": "ECE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        }
-      ],
-      "shortlistRank": 45,
-      "rank": 42
-    },
-    {
-      "id": "78190a4d-9e8c-416e-88ad-2be2b62a0686",
-      "name": "PATCH-V Dynamics",
-      "category": "Top Shortlisted",
-      "subStatus": "Shortlisted",
-      "leaderName": "Vanam Hasini",
-      "leaderEmail": "hasinivanam839@gmail.com",
-      "leaderPhone": "8142316944",
-      "leaderBranch": "CSE",
-      "leaderYear": "1st Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26032",
-      "psTitle": "Farmers often face long waiting times, lack of information regarding procurement schedules, and uncertainty about procurement status.",
-      "psCategory": "Software",
-      "psDomain": "Heritage & Culture",
-      "members": [
-        {
-          "id": "user_3IdIShJlxax6ZlXF4tBbCTi62SJ",
-          "name": "G Alok Prasoon",
-          "email": "gaprasoon8@gmail.com",
-          "phone": "9493939850",
-          "gender": "male",
-          "branch": "EEE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IdZbiEah7pysEf1Go8FgLrUaSh",
-          "name": "Vignesh Chilukapalli",
-          "email": "vigneshch35@gmail.com",
-          "phone": "9392333704",
-          "gender": "male",
-          "branch": "ECE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IdZdHl0g6x904VgGnaBVSCUejy",
-          "name": "Bazar Charan Tej Goud",
-          "email": "charantejgoudbazar@gmail.com",
-          "phone": "7207516488",
-          "gender": "male",
-          "branch": "ECE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IdZoRCku2p6ZkJ2jPPe4wyyW7Y",
-          "name": "Payel Biswas",
-          "email": "pl.biswas2006@gmail.com",
-          "phone": "8897809988",
-          "gender": "female",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Idf3sEXvFeAPQe7pAwyLHXoIFy",
-          "name": "Tarangini Ambe",
-          "email": "ambetarangini@gmail.com",
-          "phone": "8179133303",
-          "gender": "female",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ib33AqO5Gm08ekson5Jc2QeZVp",
-          "name": "Vanam Hasini",
-          "email": "hasinivanam839@gmail.com",
-          "phone": "8142316944",
-          "gender": "female",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": true
-        }
-      ],
-      "shortlistRank": 46,
-      "rank": 43
-    },
-    {
-      "id": "5042ac8d-bdea-409a-9781-ac6d2f1b4b29",
-      "name": "Team Mavericks",
-      "category": "Top Shortlisted",
-      "subStatus": "Shortlisted",
-      "leaderName": "Abdullah",
-      "leaderEmail": "abdullah.03.09.1427@gmail.com",
-      "leaderPhone": "8712220990",
-      "leaderBranch": "EEE",
-      "leaderYear": "1st Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26033",
-      "psTitle": "Multiple intermediaries reduce farmers earnings and increase consumer prices.",
-      "psCategory": "Software",
-      "psDomain": "MedTech / BioTech / HealthTech",
-      "members": [
-        {
-          "id": "user_3Ig2EQDqz5vNabHWzoFaD5BAwTp",
-          "name": "Abdullah",
-          "email": "abdullah.03.09.1427@gmail.com",
-          "phone": "8712220990",
-          "gender": "male",
-          "branch": "EEE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": true
-        },
-        {
-          "id": "user_3Ig38y3UrHGB6kiEgssgwUlO6gU",
-          "name": "Rahul Gadapa",
-          "email": "rahulgadapa147@gmail.com",
-          "phone": "8686477770",
-          "gender": "male",
-          "branch": "CS-AI",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ig35nZiJNhPabFRiaYVsZ2qjLA",
-          "name": "Jyothsna sai pranathi Madagala",
-          "email": "mjspranathi@gmail.com",
-          "phone": "9390822015",
-          "gender": "female",
-          "branch": "EEE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ig38N52XwuyoKuEjgaY9LV8tXc",
-          "name": "Marate Srichakrika ",
-          "email": "msrichakrika@gmail.com",
-          "phone": "7995232494",
-          "gender": "female",
-          "branch": "EEE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ig3JBCVfljJu3ANzAvF6KD3N0u",
-          "name": "MAMIDI ABHINAV",
-          "email": "abhinav14m@hotmail.com",
-          "phone": "8527394314",
-          "gender": "male",
-          "branch": "CS-AI",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ig3s7gkuQPsOMRXSwFi1hphgxb",
-          "name": "Sai Suhas",
-          "email": "suhassai315@gmail.com",
-          "phone": "7013826899",
-          "gender": "male",
-          "branch": "CIVIL",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        }
-      ],
-      "shortlistRank": 47,
-      "rank": 44
-    },
-    {
-      "id": "28029776-e40b-4a89-b0a7-6438182b09b0",
-      "name": "BUZZTECH",
-      "category": "Top Shortlisted",
-      "subStatus": "Shortlisted",
-      "leaderName": "K. Sri Sai Aditya",
-      "leaderEmail": "kssa88ouce2026@gmail.com",
-      "leaderPhone": "9100545299",
-      "leaderBranch": "MECH",
-      "leaderYear": "1st Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26021",
-      "psTitle": "Honey Chain: A block chain-based system for honey traceability and smart beekeeping management.",
-      "psCategory": "Software",
-      "psDomain": "Smart Automation",
-      "members": [
-        {
-          "id": "user_3IfkeZpcRpIi9GciGtqHfVbxbGi",
-          "name": "K. Sri Sai Aditya ",
-          "email": "kssa88ouce2026@gmail.com",
-          "phone": "9100545299",
-          "gender": "male",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": true
-        },
-        {
-          "id": "user_3IfpoG1R7bSXqHz4Re0YOvbMxg8",
-          "name": "N.Sharanya",
-          "email": "sharanyanrt@gmail.com",
-          "phone": "7702235701",
-          "gender": "female",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ib6KPeKJmH8SseZHlyZQYg80QD",
-          "name": "sahana bolloju",
-          "email": "bolloju.sahana@gmail.com",
-          "phone": "6303233165",
-          "gender": "female",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IfXFQQyc6pGfdXBOgCL2xjLaCQ",
-          "name": "Mary Leona",
-          "email": "a.maryleona08@gmail.com",
-          "phone": "7842430274",
-          "gender": "female",
-          "branch": "CS-AI",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IfXK9Xuxqew4ZABEdaFSaYhfMN",
-          "name": "Siri Chandana",
-          "email": "sirichandana.0121@gmail.com",
-          "phone": "7093120099",
-          "gender": "female",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IfmtQYP7zZTf5lZUXiFdZIvFTP",
-          "name": "Pandi Satya Sheela Reddy",
-          "email": "pssr2202@gmail.com",
-          "phone": "9542084049",
-          "gender": "male",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        }
-      ],
-      "waitlistRank": 3,
-      "rank": 45
     }
   ],
   "waitlistTeams": [
-    {
-      "id": "913a7ec4-661d-4e80-8617-6cd57dd09efb",
-      "name": "Veyronix",
-      "category": "Waiting List",
-      "subStatus": "Waitlist Rank #1",
-      "leaderName": "YANAGANDLA RUCHITHA SRI",
-      "leaderEmail": "yanagandlar@uceou.edu",
-      "leaderPhone": "9391687386",
-      "leaderBranch": "BME",
-      "leaderYear": "2nd Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26115",
-      "psTitle": "Design and Develop a Smart Mobile Medical-Waste Collection and Segregation System",
-      "psCategory": "Software",
-      "psDomain": "MedTech / BioTech / HealthTech",
-      "members": [
-        {
-          "id": "user_3Ib0Ty37G6dHeM6NzEhWwJ1n19Z",
-          "name": "SuramAbhiramreddy",
-          "email": "abhiramsuram40@gmail.com",
-          "phone": "9014449640",
-          "gender": "male",
-          "branch": "BME",
-          "year": "2nd Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IdaLtP8hYD3cdALdiEQq9UQ4n7",
-          "name": "Mahitha Surukanti",
-          "email": "surukantimahitha@gmail.com",
-          "phone": "7416960964",
-          "gender": "female",
-          "branch": "BME",
-          "year": "2nd Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ib0FINoqsr67exx8Inlcz6vTi3",
-          "name": "YANAGANDLA RUCHITHA SRI",
-          "email": "yanagandlar@uceou.edu",
-          "phone": "9391687386",
-          "gender": "female",
-          "branch": "BME",
-          "year": "2nd Year (B.Tech)",
-          "isLeader": true
-        },
-        {
-          "id": "user_3IdfjNgZ7m7EHHIKVeYm5KLzvF9",
-          "name": "Mahalakshmi Nathala",
-          "email": "mahalakshminathala55@gmail.com",
-          "phone": "7670824988",
-          "gender": "female",
-          "branch": "BME",
-          "year": "2nd Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Idf35Jwnn7BRjQflodZ69Vkfa3",
-          "name": "Gera Amulya",
-          "email": "geraamulya@gmail.com",
-          "phone": "9502315196",
-          "gender": "female",
-          "branch": "BME",
-          "year": "2nd Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IdgzZSl3Zz6ORJQ5UGBbr9Vyq0",
-          "name": "Priyanka More",
-          "email": "priyankamore7177@gmail.com",
-          "phone": "9014808097",
-          "gender": "female",
-          "branch": "BME",
-          "year": "2nd Year (B.Tech)",
-          "isLeader": false
-        }
-      ],
-      "shortlistRank": 41,
-      "waitlistRank": 1
-    },
-    {
-      "id": "a8d10428-5d3d-4b9c-ab00-aed7cc220674",
-      "name": "The OG-Z",
-      "category": "Waiting List",
-      "subStatus": "Waitlist Rank #2",
-      "leaderName": "Elisha Isaac E",
-      "leaderEmail": "elishaisaac2007e@gmail.com",
-      "leaderPhone": "9642000267",
-      "leaderBranch": "MECH",
-      "leaderYear": "1st Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26001",
-      "psTitle": "AI-Based early warning and landslide Risk Monitoring System in NER",
-      "psCategory": "Software",
-      "psDomain": "Disaster Management",
-      "members": [
-        {
-          "id": "user_3Ih06tWJRWmwjZ6e3m9I8uX2Dsf",
-          "name": "Elisha Isaac E",
-          "email": "elishaisaac2007e@gmail.com",
-          "phone": "9642000267",
-          "gender": "male",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": true
-        },
-        {
-          "id": "user_3Ij22e3w1xhPAKYUZgFiPtqZUQn",
-          "name": "Dinesh Sriram",
-          "email": "sriramdinesh252@gmail.com",
-          "phone": "6301129016",
-          "gender": "male",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ij24PRiuxA6CTQzCMjENvf1SEE",
-          "name": "Jonnalagadda Siddhardha",
-          "email": "jonnalagaddasiddardha22@gmail.com",
-          "phone": "7842290171",
-          "gender": "male",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ij6rRHGtBKHKdt3ZChO2BF39lr",
-          "name": "Nuthana sree Kota",
-          "email": "knuthana311@gmail.com",
-          "phone": "8688769311",
-          "gender": "female",
-          "branch": "CIVIL",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3Ij7qGI9DhytK9z0oOjYmhoUefr",
-          "name": "Akula Indhumathi",
-          "email": "akulaindhumathi7@gmail.com",
-          "phone": "9949570924",
-          "gender": "female",
-          "branch": "CIVIL",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IjSyj27yXXWZ7OpAg3pH7CzCxm",
-          "name": "SIDDARTH HARSHA",
-          "email": "siddusiddu35936@gmail.com",
-          "phone": "9652370995",
-          "gender": "male",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        }
-      ],
-      "waitlistRank": 2
-    },
-    {
-      "id": "405bdd80-081c-4b52-a441-382c540819c6",
-      "name": "YatraX",
-      "category": "Waiting List",
-      "subStatus": "Waitlist Rank #3",
-      "leaderName": "Pranavi Polemoni",
-      "leaderEmail": "polemonipranavi02@gmail.com",
-      "leaderPhone": "8074458379",
-      "leaderBranch": "CSE",
-      "leaderYear": "1st Year (B.Tech)",
-      "membersCount": 6,
-      "psId": "SIH26204",
-      "psTitle": "Student Innovation",
-      "psCategory": "Software",
-      "psDomain": "Miscellaneous",
-      "members": [
-        {
-          "id": "user_3IazwlO5k8Ehc1GnZF8jT3Wvjjp",
-          "name": "Siri Martha",
-          "email": "marthasiri609@gmail.com",
-          "phone": "8688113757",
-          "gender": "female",
-          "branch": "MECH",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IgL5Q64w4gfjR1RwolYUTxpXBW",
-          "name": "Pranavi Polemoni",
-          "email": "polemonipranavi02@gmail.com",
-          "phone": "8074458379",
-          "gender": "female",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": true
-        },
-        {
-          "id": "user_3IgZMI7AgDhbVngfJSaDz3U1PwZ",
-          "name": "Sathvik Thirunagari",
-          "email": "sathvikthirunagari79@gmail.com",
-          "phone": "6302677230",
-          "gender": "male",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IgaSXxsUhxLJ7RiWkmSOxWlKeH",
-          "name": "Lalithadithya Balla",
-          "email": "ballalalithadithya609@gmail.com",
-          "phone": "9032346109",
-          "gender": "male",
-          "branch": "CSE",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3IgbjFbyCNWw6S3iHJpycs0AM2R",
-          "name": "Maneesha Badavath",
-          "email": "badavathmaneesha27@gmail.com",
-          "phone": "7416919721",
-          "gender": "female",
-          "branch": "CS-AI",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        },
-        {
-          "id": "user_3JEakmmiQCj2VXBCJmMHeKr6bj6",
-          "name": "Sharmilabolla",
-          "email": "sharmilabolla33@gmail.com",
-          "phone": "7893489477",
-          "gender": "female",
-          "branch": "CS-AI",
-          "year": "1st Year (B.Tech)",
-          "isLeader": false
-        }
-      ],
-      "waitlistRank": 3
-    },
     {
       "id": "b3399c25-f9b3-4cf0-88bb-79528292c4dd",
       "name": "CyberCoders",
@@ -4003,6 +3765,244 @@
         }
       ],
       "waitlistRank": 5
+    },
+    {
+      "id": "a8d10428-5d3d-4b9c-ab00-aed7cc220674",
+      "name": "The OG-Z",
+      "category": "Waiting List",
+      "subStatus": "Waitlist Rank #2",
+      "leaderName": "Elisha Isaac E",
+      "leaderEmail": "elishaisaac2007e@gmail.com",
+      "leaderPhone": "9642000267",
+      "leaderBranch": "MECH",
+      "leaderYear": "1st Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26001",
+      "psTitle": "AI-Based early warning and landslide Risk Monitoring System in NER",
+      "psCategory": "Software",
+      "psDomain": "Disaster Management",
+      "members": [
+        {
+          "id": "user_3Ih06tWJRWmwjZ6e3m9I8uX2Dsf",
+          "name": "Elisha Isaac E",
+          "email": "elishaisaac2007e@gmail.com",
+          "phone": "9642000267",
+          "gender": "male",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": true
+        },
+        {
+          "id": "user_3Ij22e3w1xhPAKYUZgFiPtqZUQn",
+          "name": "Dinesh Sriram",
+          "email": "sriramdinesh252@gmail.com",
+          "phone": "6301129016",
+          "gender": "male",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ij24PRiuxA6CTQzCMjENvf1SEE",
+          "name": "Jonnalagadda Siddhardha",
+          "email": "jonnalagaddasiddardha22@gmail.com",
+          "phone": "7842290171",
+          "gender": "male",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ij6rRHGtBKHKdt3ZChO2BF39lr",
+          "name": "Nuthana sree Kota",
+          "email": "knuthana311@gmail.com",
+          "phone": "8688769311",
+          "gender": "female",
+          "branch": "CIVIL",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ij7qGI9DhytK9z0oOjYmhoUefr",
+          "name": "Akula Indhumathi",
+          "email": "akulaindhumathi7@gmail.com",
+          "phone": "9949570924",
+          "gender": "female",
+          "branch": "CIVIL",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IjSyj27yXXWZ7OpAg3pH7CzCxm",
+          "name": "SIDDARTH HARSHA",
+          "email": "siddusiddu35936@gmail.com",
+          "phone": "9652370995",
+          "gender": "male",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        }
+      ],
+      "waitlistRank": 2
+    },
+    {
+      "id": "913a7ec4-661d-4e80-8617-6cd57dd09efb",
+      "name": "Veyronix",
+      "category": "Waiting List",
+      "subStatus": "Waitlist Rank #1",
+      "leaderName": "YANAGANDLA RUCHITHA SRI",
+      "leaderEmail": "yanagandlar@uceou.edu",
+      "leaderPhone": "9391687386",
+      "leaderBranch": "BME",
+      "leaderYear": "2nd Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26115",
+      "psTitle": "Design and Develop a Smart Mobile Medical-Waste Collection and Segregation System",
+      "psCategory": "Software",
+      "psDomain": "MedTech / BioTech / HealthTech",
+      "members": [
+        {
+          "id": "user_3Ib0Ty37G6dHeM6NzEhWwJ1n19Z",
+          "name": "SuramAbhiramreddy",
+          "email": "abhiramsuram40@gmail.com",
+          "phone": "9014449640",
+          "gender": "male",
+          "branch": "BME",
+          "year": "2nd Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IdaLtP8hYD3cdALdiEQq9UQ4n7",
+          "name": "Mahitha Surukanti",
+          "email": "surukantimahitha@gmail.com",
+          "phone": "7416960964",
+          "gender": "female",
+          "branch": "BME",
+          "year": "2nd Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Ib0FINoqsr67exx8Inlcz6vTi3",
+          "name": "YANAGANDLA RUCHITHA SRI",
+          "email": "yanagandlar@uceou.edu",
+          "phone": "9391687386",
+          "gender": "female",
+          "branch": "BME",
+          "year": "2nd Year (B.Tech)",
+          "isLeader": true
+        },
+        {
+          "id": "user_3IdfjNgZ7m7EHHIKVeYm5KLzvF9",
+          "name": "Mahalakshmi Nathala",
+          "email": "mahalakshminathala55@gmail.com",
+          "phone": "7670824988",
+          "gender": "female",
+          "branch": "BME",
+          "year": "2nd Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3Idf35Jwnn7BRjQflodZ69Vkfa3",
+          "name": "Gera Amulya",
+          "email": "geraamulya@gmail.com",
+          "phone": "9502315196",
+          "gender": "female",
+          "branch": "BME",
+          "year": "2nd Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IdgzZSl3Zz6ORJQ5UGBbr9Vyq0",
+          "name": "Priyanka More",
+          "email": "priyankamore7177@gmail.com",
+          "phone": "9014808097",
+          "gender": "female",
+          "branch": "BME",
+          "year": "2nd Year (B.Tech)",
+          "isLeader": false
+        }
+      ],
+      "shortlistRank": 41,
+      "waitlistRank": 1
+    },
+    {
+      "id": "405bdd80-081c-4b52-a441-382c540819c6",
+      "name": "YatraX",
+      "category": "Waiting List",
+      "subStatus": "Waitlist Rank #3",
+      "leaderName": "Pranavi Polemoni",
+      "leaderEmail": "polemonipranavi02@gmail.com",
+      "leaderPhone": "8074458379",
+      "leaderBranch": "CSE",
+      "leaderYear": "1st Year (B.Tech)",
+      "membersCount": 6,
+      "psId": "SIH26204",
+      "psTitle": "Student Innovation",
+      "psCategory": "Software",
+      "psDomain": "Miscellaneous",
+      "members": [
+        {
+          "id": "user_3IazwlO5k8Ehc1GnZF8jT3Wvjjp",
+          "name": "Siri Martha",
+          "email": "marthasiri609@gmail.com",
+          "phone": "8688113757",
+          "gender": "female",
+          "branch": "MECH",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IgL5Q64w4gfjR1RwolYUTxpXBW",
+          "name": "Pranavi Polemoni",
+          "email": "polemonipranavi02@gmail.com",
+          "phone": "8074458379",
+          "gender": "female",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": true
+        },
+        {
+          "id": "user_3IgZMI7AgDhbVngfJSaDz3U1PwZ",
+          "name": "Sathvik Thirunagari",
+          "email": "sathvikthirunagari79@gmail.com",
+          "phone": "6302677230",
+          "gender": "male",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IgaSXxsUhxLJ7RiWkmSOxWlKeH",
+          "name": "Lalithadithya Balla",
+          "email": "ballalalithadithya609@gmail.com",
+          "phone": "9032346109",
+          "gender": "male",
+          "branch": "CSE",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3IgbjFbyCNWw6S3iHJpycs0AM2R",
+          "name": "Maneesha Badavath",
+          "email": "badavathmaneesha27@gmail.com",
+          "phone": "7416919721",
+          "gender": "female",
+          "branch": "CS-AI",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        },
+        {
+          "id": "user_3JEakmmiQCj2VXBCJmMHeKr6bj6",
+          "name": "Sharmilabolla",
+          "email": "sharmilabolla33@gmail.com",
+          "phone": "7893489477",
+          "gender": "female",
+          "branch": "CS-AI",
+          "year": "1st Year (B.Tech)",
+          "isLeader": false
+        }
+      ],
+      "waitlistRank": 3
     }
   ],
   "eliminatedTeams": []

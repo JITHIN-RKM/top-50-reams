@@ -3,13 +3,17 @@ import teamsData from '@/data/teams_breakdown.json';
 import { sanitizeCsvCell } from '@/lib/security';
 
 export async function GET() {
-  const top45Teams = (teamsData as any).top45Teams || (teamsData as any).top47Teams || [];
-  const waitlistTeams = (teamsData as any).waitlistTeams || [];
+  const top45Teams = [...((teamsData as any).top45Teams || (teamsData as any).top47Teams || [])].sort((a: any, b: any) =>
+    (a.name || '').localeCompare(b.name || '', undefined, { sensitivity: 'base', numeric: true })
+  );
+  const waitlistTeams = [...((teamsData as any).waitlistTeams || [])].sort((a: any, b: any) =>
+    (a.name || '').localeCompare(b.name || '', undefined, { sensitivity: 'base', numeric: true })
+  );
 
   const headers = [
     'Section',
     'Official Status',
-    'Rank / S.No',
+    'S.No',
     'Team Name',
     'Leader Name',
     'Leader Phone',
@@ -46,7 +50,7 @@ export async function GET() {
   waitlistTeams.forEach((t: any, idx: number) => {
     rows.push([
       sanitizeCsvCell('2. Waiting List (5 Teams)'),
-      sanitizeCsvCell(`Waitlist Rank #${idx + 1}`),
+      sanitizeCsvCell('Waiting List'),
       idx + 1,
       sanitizeCsvCell(t.name),
       sanitizeCsvCell(t.leaderName),
